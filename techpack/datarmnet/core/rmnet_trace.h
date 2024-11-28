@@ -6,7 +6,7 @@
 #define TRACE_SYSTEM rmnet
 #undef TRACE_INCLUDE_PATH
 #define TRACE_INCLUDE_PATH .
-#define TRACE_INCLUDE_FILE rmnet_trace
+#define TRACE_INCLUDE_FILE ../../techpack/datarmnet/core/rmnet_trace
 
 #if !defined(_TRACE_RMNET_H) || defined(TRACE_HEADER_MULTI_READ)
 #define _TRACE_RMNET_H

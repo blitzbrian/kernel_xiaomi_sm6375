@@ -13,7 +13,7 @@
 #undef TRACE_SYSTEM
 #define TRACE_SYSTEM sde
 #undef TRACE_INCLUDE_FILE
-#define TRACE_INCLUDE_FILE sde_trace
+#define TRACE_INCLUDE_FILE ../../techpack/display/msm/sde/sde_trace
 
 TRACE_EVENT(sde_perf_set_qos_luts,
 	TP_PROTO(u32 pnum, u32 fmt, u32 mode, u32 danger_lut,

@@ -4,7 +4,7 @@
  */
 #undef TRACE_SYSTEM
 #define TRACE_SYSTEM msm_vidc_events
-#define TRACE_INCLUDE_FILE msm_vidc_events
+#define TRACE_INCLUDE_FILE ../../techpack/video/msm/vidc/msm_vidc_events
 
 #if !defined(_TRACE_MSM_VIDC_H_) || defined(TRACE_HEADER_MULTI_READ)
 #define _TRACE_MSM_VIDC_H

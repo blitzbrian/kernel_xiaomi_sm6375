@@ -14,7 +14,7 @@
 #define TRACE_SYSTEM dfc
 #undef TRACE_INCLUDE_PATH
 #define TRACE_INCLUDE_PATH .
-#define TRACE_INCLUDE_FILE dfc
+#define TRACE_INCLUDE_FILE ../../techpack/datarmnet/core/dfc
 
 #if !defined(_TRACE_DFC_H) || defined(TRACE_HEADER_MULTI_READ)
 #define _TRACE_DFC_H

@@ -10,7 +10,7 @@
 #undef TRACE_INCLUDE_PATH
 #define TRACE_INCLUDE_PATH .
 #undef TRACE_INCLUDE_FILE
-#define TRACE_INCLUDE_FILE sde_rotator_trace
+#define TRACE_INCLUDE_FILE ../../techpack/display/rotator/sde_rotator_trace
 
 #include <linux/tracepoint.h>
 #include <sde_rotator_core.h>
