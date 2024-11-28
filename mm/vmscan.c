@@ -205,6 +205,8 @@ static DEFINE_RWLOCK(shrinker_rwlock);
 #define SHRINKER_REGISTERING ((struct shrinker *)~0UL)
 
 static DEFINE_IDR(shrinker_idr);
+static DECLARE_RWSEM(shrinker_rwsem);
+
 static int shrinker_nr_max;
 
 static int prealloc_memcg_shrinker(struct shrinker *shrinker)
