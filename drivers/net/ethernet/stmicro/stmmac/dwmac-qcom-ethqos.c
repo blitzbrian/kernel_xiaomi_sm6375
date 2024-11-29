@@ -120,7 +120,7 @@ struct qcom_ethqos *pethqos;
 
 static unsigned char dev_addr[ETH_ALEN] = {
 	0, 0x55, 0x7b, 0xb5, 0x7d, 0xf7};
-static struct ip_params pparams = {"", "", "", ""};
+static struct ip_params pparams = {"", 0, "", 0};
 
 static inline unsigned int dwmac_qcom_get_eth_type(unsigned char *buf)
 {
