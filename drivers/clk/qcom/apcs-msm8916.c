@@ -17,7 +17,20 @@
 #include "clk-regmap.h"
 #include "clk-regmap-mux-div.h"
 
-static const u32 gpll0_a53cc_map[] = { 4, 5 };
+enum {
+	P_BI_TCXO,
+	P_CORE_BI_PLL_TEST_SE,
+	P_GPLL0_OUT_MAIN,
+	P_GPLL0_OUT_MAIN_DIV,
+	P_NPU_CC_PLL0_OUT_EVEN,
+	P_NPU_CC_PLL1_OUT_EVEN,
+	P_NPU_CC_CRC_DIV,
+};
+
+static const struct parent_map gpll0_a53cc_map[] = {
+    { P_GPLL0_OUT_MAIN, 4 },
+    { P_BI_TCXO, 5 },
+};
 
 static const char * const gpll0_a53cc[] = {
 	"gpll0_vote",
