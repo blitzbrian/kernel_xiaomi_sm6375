@@ -3772,8 +3772,9 @@ read_again:
 			page_pool_recycle_direct(rx_q->page_pool, buf->page);
 			buf->page = NULL;
 		} else {
-			unsigned int buf_len = len - prev_len;
-
+			// unsigned int buf_len = len - prev_len;
+			unsigned int buf_len = len;
+			
 			if (likely(status & rx_not_ls))
 				buf_len = priv->dma_buf_sz;
 
@@ -3788,7 +3789,10 @@ read_again:
 			buf->page = NULL;
 		}
 
-		if (sec_len > 0) {
+		if (
+			// sec_len > 0
+			0
+			) {
 			dma_sync_single_for_cpu(GET_MEM_PDEV_DEV, buf->sec_addr,
 						sec_len, DMA_FROM_DEVICE);
 			skb_add_rx_frag(skb, skb_shinfo(skb)->nr_frags,
