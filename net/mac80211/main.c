@@ -1420,9 +1420,9 @@ static int __init ieee80211_init(void)
 	BUILD_BUG_ON(offsetof(struct ieee80211_tx_info, driver_data) +
 		     IEEE80211_TX_INFO_DRIVER_DATA_SIZE > sizeof(skb->cb));
 
-	ret = rc80211_minstrel_init();
-	if (ret)
-		return ret;
+	// ret = rc80211_minstrel_init();
+	// if (ret)
+	// 	return ret;
 
 	ret = ieee80211_iface_init();
 	if (ret)
@@ -1430,14 +1430,14 @@ static int __init ieee80211_init(void)
 
 	return 0;
  err_netdev:
-	rc80211_minstrel_exit();
+	// rc80211_minstrel_exit();
 
 	return ret;
 }
 
 static void __exit ieee80211_exit(void)
 {
-	rc80211_minstrel_exit();
+	// rc80211_minstrel_exit();
 
 	ieee80211s_stop();
 
