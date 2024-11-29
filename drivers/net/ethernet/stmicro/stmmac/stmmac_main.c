@@ -3789,20 +3789,19 @@ read_again:
 			buf->page = NULL;
 		}
 
-		if (
-			// sec_len > 0
-			0
-			) {
-			dma_sync_single_for_cpu(GET_MEM_PDEV_DEV, buf->sec_addr,
-						sec_len, DMA_FROM_DEVICE);
-			skb_add_rx_frag(skb, skb_shinfo(skb)->nr_frags,
-					buf->sec_page, 0, buf2_len,
-					priv->dma_buf_sz);
+		// if (
+		// 	sec_len > 0
+		// 	) {
+		// 	dma_sync_single_for_cpu(GET_MEM_PDEV_DEV, buf->sec_addr,
+		// 				sec_len, DMA_FROM_DEVICE);
+		// 	skb_add_rx_frag(skb, skb_shinfo(skb)->nr_frags,
+		// 			buf->sec_page, 0, buf2_len,
+		// 			priv->dma_buf_sz);
 
-			/* Data payload appended into SKB */
-			page_pool_release_page(rx_q->page_pool, buf->sec_page);
-			buf->sec_page = NULL;
-		}
+		// 	/* Data payload appended into SKB */
+		// 	page_pool_release_page(rx_q->page_pool, buf->sec_page);
+		// 	buf->sec_page = NULL;
+		// }
 
 drain_data:
 		if (likely(status & rx_not_ls))
